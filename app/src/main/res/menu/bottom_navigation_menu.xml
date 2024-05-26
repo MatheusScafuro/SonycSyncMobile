@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:title="Buscar"/>
+    <item
+        android:id="@+id/library"
+        android:icon="@drawable/ic_library"
+        android:title="Minha Biblioteca"/>
+    <item
+        android:id="@+id/music_player"
+        android:icon="@drawable/ic_music_player"
+        android:title="Reproduzir Músicas"/> <!-- Substitua ic_music_player pelo ícone correto -->
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Configurações"/>
+</menu>
