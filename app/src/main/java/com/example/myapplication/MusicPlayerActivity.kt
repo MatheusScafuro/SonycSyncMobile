@@ -1,29 +1,27 @@
 package com.example.myapplication
 
-import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MusicPlayerActivity : AppCompatActivity() {
+
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_music_player)
 
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
-        bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                else -> false
-            }
-        }
+        // Inicialize o MediaPlayer com o arquivo de áudio desejado
+        mediaPlayer = MediaPlayer.create(this, R.raw.sample_audio)
 
-        // Aqui você pode adicionar a lógica para reproduzir música e manipular controles de reprodução
+        // Inicie a reprodução da música
+        mediaPlayer.start()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Certifique-se de liberar os recursos do MediaPlayer quando a atividade for destruída
+        mediaPlayer.release()
     }
 }

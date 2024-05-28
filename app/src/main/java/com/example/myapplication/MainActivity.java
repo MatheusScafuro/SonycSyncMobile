@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         songList = new ArrayList<>();
         // Adicione músicas à lista
-        songList.add(new Song("Song Title 1", R.raw.my_song)); // Substitua pelo nome do arquivo na pasta raw
+        songList.add(new Song("Song Title 1", R.raw.sample_audio)); // Substitua pelo nome do arquivo na pasta raw
 
         songAdapter = new SongAdapter(this, songList, new SongAdapter.OnItemClickListener() {
             @Override

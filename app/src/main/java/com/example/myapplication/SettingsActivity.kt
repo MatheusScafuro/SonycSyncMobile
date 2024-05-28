@@ -1,11 +1,11 @@
 package com.example.myapplication
 
+import HomeActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.example.myapplication.R
 
 class SettingsActivity : AppCompatActivity() {
 

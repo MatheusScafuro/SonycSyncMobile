@@ -1,10 +1,11 @@
-package com.example.myapplication
-
-
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.MusicPlayerActivity
+import com.example.myapplication.R
+import com.example.myapplication.SettingsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -28,6 +29,13 @@ class HomeActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        val playMusicButton: Button = findViewById(R.id.playMusicButton)
+        playMusicButton.setOnClickListener {
+            // Iniciar a MusicPlayerActivity quando o botão "Reproduzir Músicas" for pressionado
+            val intent = Intent(this, MusicPlayerActivity::class.java)
+            startActivity(intent)
         }
     }
 }
